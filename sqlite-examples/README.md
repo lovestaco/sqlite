@@ -89,6 +89,17 @@ Demonstrates concurrent database operations using SQLite with pthreads.
 
 **Related Blog Post:** [Direct SQL Execution and Concurrency in SQLite](https://dev.to/lovestaco/direct-sql-execution-and-concurrency-in-sqlite-405d)
 
+### 6. Manifest Typing (`manifest_typing/`)
+
+Demonstrates SQLite's manifest typing — each value carries its own storage class, independent of the column declaration.
+
+**Features:**
+- Creating a table with a TEXT column
+- Inserting an integer (`123`) and a text (`'abc'`) into the same column
+- Using `typeof()` to reveal the actual storage class per row
+
+**Key Concept:** SQLite uses variable-length, manifest-typed storage. The type is determined by the value inserted, not by the column declaration. An INTEGER column can store TEXT, and vice versa.
+
 ## Notes
 
 - These examples are simplified and do not include comprehensive error checking
