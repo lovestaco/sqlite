@@ -100,6 +100,12 @@ Demonstrates SQLite's manifest typing — each value carries its own storage cla
 
 **Key Concept:** SQLite uses variable-length, manifest-typed storage. The type is determined by the value inserted, not by the column declaration. An INTEGER column can store TEXT, and vice versa.
 
+### 7. Storage Type Determination (`storage_type_determination/`)
+
+How SQLite decides the storage type of a value: typeless columns, the INTEGER PRIMARY KEY exception, and how SQL literals (TEXT, INTEGER, REAL, NULL, BLOB) map to storage.
+
+**Documentation:** [storage_type_determination/README.md](storage_type_determination/README.md)
+
 ## Notes
 
 - These examples are simplified and do not include comprehensive error checking
